@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title>Github Manager </title>
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+          <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+          <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+          <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+          <script type="text/javascript" src="index.js"></script>
+
+    </head>
+
+    <body class="container" align="center">
+        <h3>Github Manager</h3>
+        <br>
+        <div>
+          <input type="text" id="status" name="status" placeholder="Enter repository name">
+          <button type="button" onclick="search(document.getElementById('status'))">Search</button>
+        </div>
+        <br>
+          Top Packages:
+          <button type="button" onclick="getTopPackages()">Get Top 10!</button>
+          <br>
+        <hr>
+            <input type="text" id="packageSearch" name="packageSearch" placeholder="Enter package name" style="display: none">
+            <button type="button" id ="pkgSearchBtn" onclick="searchPackage(document.getElementById('packageSearch'))" style="display: none">Search</button>
+            <div id="myDiv"></div>
+        <hr>
+    </body>
+</html>
